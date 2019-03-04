@@ -5,7 +5,7 @@ class ComplainsController < ApplicationController
             company: Company.find(params[:company_id]),
             user_id: current_user.id
         )
-        @complains.save
+        @complain.save
         respond_to do |format|
             format.js
         end
