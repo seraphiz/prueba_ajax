@@ -1,16 +1,14 @@
-<h1>Detalle de la Compañia</h1>
+<h1>Detalle de la Compañia: <%= @company.name %></h1>
 
-<%= @company.name %>
 
-<h2>Reclamos</h2>
-
+<h2>Deje su reclamo:</h2>
 <%= form_with(model: [@company, @complain]) do |f| %>
 <%= f.label :content %>
 <%= f.text_field :content %>
 <%= f.submit %>
 
 <% end %>
-
+<h2>Reclamos</h2>
 <ul id="company_complain_list">
 <% @company.complains.each do |c| %>
 <li><%= c.content  %> - <%= c.user.email %></li>
