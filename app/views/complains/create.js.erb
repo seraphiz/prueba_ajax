@@ -1,1 +1,1 @@
-$('#company_complain_list').append('<li><%= @complain.content %></li>')
+$('#company_complain_list').prepend('<li><%= @complain.content %> - <%= @complain.user.email %></li>')

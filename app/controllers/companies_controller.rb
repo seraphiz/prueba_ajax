@@ -17,6 +17,7 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
     @complain = Complain.new
+
   end 
   
   def edit

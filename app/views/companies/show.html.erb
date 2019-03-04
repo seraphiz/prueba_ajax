@@ -10,7 +10,7 @@
 <% end %>
 <h2>Reclamos</h2>
 <ul id="company_complain_list">
-<% @company.complains.each do |c| %>
+<% @company.complains.all.order("id DESC").each do |c| %>
 <li><%= c.content  %> - <%= c.user.email %></li>
 
 <% end %>
