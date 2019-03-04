@@ -1,0 +1,1 @@
+<li id="<%= company.id %>"><%= company.name %>, <%= link_to 'Show', company %> | <%= link_to 'Edit', edit_company_path(company), data: { remote: true }  %> | <%= link_to 'x', company, method: :delete, data: { confirm: 'Seguro?', remote: true } %></li>
